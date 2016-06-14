@@ -1,13 +1,9 @@
-import requests
 import argparse
 import socket
 import sys
 import pickle
 import time
 
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 parser = argparse.ArgumentParser(
     description='Send UDP file captured previously using UDPReceive.py')

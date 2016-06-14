@@ -1,22 +1,9 @@
-import struct
-#import base64
-#import binascii
-import time
 import datetime
-import requests
 import pickle
-#import getopt, sys
 import argparse
-#import json
 import socket
 import sys
-import os
-#import socketserver
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-
-# if __name__ == "__main__":
 parser = argparse.ArgumentParser(
     description='Capture UDP packets for further analysis')
 parser.add_argument('-p', '--port', help='Port to listen to', required=False)
@@ -53,7 +40,7 @@ except socket.error as msg:
 print('Socket bind complete')
 
 f = open(file, 'wb')
-f2 = open(file + '.raw.bin', 'wb')
+f2 = open(file + '.raw', 'wb')
 previousts = datetime.datetime.now()
 delta=0
 while 1:

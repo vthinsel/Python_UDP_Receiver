@@ -1,10 +1,6 @@
-import requests
 import argparse
 import socket
 import sys
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 parser = argparse.ArgumentParser(
     description='Send a raw UDP file captured previously')
