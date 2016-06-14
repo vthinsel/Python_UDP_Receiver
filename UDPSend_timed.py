@@ -4,7 +4,6 @@ import sys
 import pickle
 import time
 
-
 parser = argparse.ArgumentParser(
     description='Send UDP file captured previously using UDPReceive.py')
 parser.add_argument('-p', '--port', help='Port to listen to', required=True)
