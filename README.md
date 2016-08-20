@@ -19,3 +19,9 @@ is associated so the replay is accurate with timing information
  reflecting the original UDP flow
 
 A sample UDP stream from ProjectCars is included as reference.
+
+In addition, the DecodeBianryFile.py can be of some help to figure out the raw UDP frame : you give the packet size,
+the offset and the data type and you will see the values. On a dirt ralye UDP stream, you can see the speed in m/s 
+with the following command:
+python DecodeBinaryFile.py -f DirtRallye.raw.bin -t float -p 264 -o 28
+(packet size is 264, and speed offset is at 28)
