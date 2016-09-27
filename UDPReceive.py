@@ -23,7 +23,7 @@ parser = argparse.ArgumentParser(
     description='Capture UDP packets for further analysis and playback')
 parser.add_argument('-p', '--port', help='Port to listen to', required=True)
 parser.add_argument('-f', '--file', help='File to write data to', required=False)
-parser.add_argument('-b', '--buffer', help='Host target', required=False)
+parser.add_argument('-b', '--buffer', help='Buffer size', required=False)
 parser.add_argument('-c', '--count', help='Stop capture after x packets', required=False)
 parser.add_argument('-s', '--seconds', help='Stop capture after x seconds', required=False)
 

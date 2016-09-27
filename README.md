@@ -7,7 +7,7 @@ motion simulation, etc. Developping is much more easy this way as the stimuli is
 Timing is also very important to reproduce the application behavior, so each time a UDP packet is received a timestamp
 is associated so the replay is accurate with timing information
 
-3 main tools are available :
+4 main tools are available :
 - The UDP receiver UDPReceive.py that is used to capture the incoming UDP data on a given port. This tool generates
  2 output files, based on the file name provided with the argument -f: a raw file with the UDP data unprocessed (.raw
  suffix added), and another file in a compressed format that includes timing data which is used by the playback tool
@@ -17,6 +17,8 @@ is associated so the replay is accurate with timing information
 
 - The "advanced" UDP sender UDPSend_timed which sends the captured UDP data including the timing of the data,
  reflecting the original UDP flow
+
+- The UDP_proxy which you can use in case you need to replicate udp data towards several destinations (upto 3)
 
 A sample UDP stream from ProjectCars is included as reference.
 
