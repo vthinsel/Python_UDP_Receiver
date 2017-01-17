@@ -1,4 +1,4 @@
-# Python_UDP_Receiver - Made with Python 3 
+# Python_UDP_Tools - Made with Python 3 
 
 This small repository contains several UDP tools used to capture/replay UDP data. This is usefull when making
 applications that require incoming UDP data processing and when this data is not so easy to reproduce. This is true
@@ -8,6 +8,7 @@ Timing is also very important to reproduce the application behavior, so each tim
 is associated so the replay is accurate with timing information
 
 4 main tools are available :
+
 - The UDP receiver UDPReceive.py that is used to capture the incoming UDP data on a given port. This tool generates
  2 output files, based on the file name provided with the argument -f: a raw file with the UDP data unprocessed (.raw
  suffix added), and another file in a compressed format that includes timing data which is used by the playback tool
@@ -22,8 +23,9 @@ is associated so the replay is accurate with timing information
 
 A sample UDP stream from ProjectCars is included as reference.
 
-In addition, the DecodeBianryFile.py can be of some help to figure out the raw UDP frame : you give the packet size,
+In addition, the DecodeBinaryFile.py can be of some help to figure out the raw UDP frame : you give the packet size,
 the offset and the data type and you will see the values. On a dirt ralye UDP stream, you can see the speed in m/s 
 with the following command:
 python DecodeBinaryFile.py -f DirtRallye.raw.bin -t float -p 264 -o 28
 (packet size is 264, and speed offset is at 28)
+ 
